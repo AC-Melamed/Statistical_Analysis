@@ -6,7 +6,7 @@ For this project, the design specifications of 50 different experimental vehicle
 lm1 <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=df1)
 ```
 The results of this model were as seen below:
-
+\
 ![Part1](/Images/part1.png)
 
 Assuming a significance threshold of 0.05, the coefficients produced by the model for vehicle length and ground clearance indicate a statistically significant, non-random variance.  The coefficients  for vehicle weight, spoiler angle, and all-wheel drive do not clear the threshold for statistical significance and can therefor be attributed to random variance.  
@@ -23,7 +23,7 @@ The suspension coil dataset was summarized as a whole by the following code:
 total_summary <- df2 %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = 'keep')
 ```
 This produced the following table:
-
+\
 ![TotalSummary](/Images/part2a.png)
 
 The suspension coil dataset was summarized for individual manufacturing lots by the following code:
@@ -31,7 +31,7 @@ The suspension coil dataset was summarized for individual manufacturing lots by 
 lot_summary <- df2 %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = 'keep')
 ```
 This produced the following table:
-
+\
 ![LotSummary](/Images/part2b.png)
 
 The design specifications for the suspension coils prohibit their PSI measurements from exhibiting variance greater than 100 pounds per square inch.  Given this mandate, the three lots collectively pass quality assurance.  However, when considered individually, Lot 3 specifically fails while Lots 1 and 2 pass.      
@@ -45,7 +45,7 @@ First, the three lots were tested as a whole using the following script:
 t.test(df2$PSI, mu=1500)
 ```
 This test produced the below results:
-
+\
 ![Part3a](Images/part3a.png)
 
 The p-value produced by this test is small enough that the null hypothesis can be rejected with 95% confidence, suggesting that the the mean PSI value for the coils across all manufacturing lots is significantly different from the known norm.
