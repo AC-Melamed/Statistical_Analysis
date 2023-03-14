@@ -53,7 +53,7 @@ Next, three individual tests were performed, one for each individual manufacturi
 ```
 t.test(subset(df2$PSI, df2$Manufacturing_Lot == "Lot1"), mu=1500)
 ```
-![Part3b](Imagees/part3b.png)
+![Part3b](Images/part3b.png)
 
 The p-value produced for Lot 1 is greater than 0.05 with 95% confidence, so the null hypothesis cannot be rejected.  This suggests that the mean PSI value for the coils produced by Lot 1 is not significantly different from tne known norm.
 
@@ -61,7 +61,7 @@ The p-value produced for Lot 1 is greater than 0.05 with 95% confidence, so the 
 ```
 t.test(subset(df2$PSI, df2$Manufacturing_Lot == "Lot2"), mu=1500)
 ```
-![Part3c](Imagees/part3c.png)
+![Part3c](Images/part3c.png)
 
 The p-value produced for Lot 2 is greater than 0.05 with 95% confidence, so the null hypothesis cannot be rejected.  This suggests that the mean PSI value for the coils produced by Lot 2 is not significantly different from tne known norm.
 
@@ -69,7 +69,7 @@ The p-value produced for Lot 2 is greater than 0.05 with 95% confidence, so the 
 ```
 t.test(subset(df2$PSI, df2$Manufacturing_Lot == "Lot3"), mu=1500)
 ```
-![Part3d](Imagees/part3d.png)
+![Part3d](Images/part3d.png)
 
 The p-value produced for Lot 2 is less than 0.05 with 95% confidence, so the null hypothesis can in this case be rejected.  This suggests that the mean PSI value for the coils produced by Lot 2 is in fact significantly different from tne known norm.
 
